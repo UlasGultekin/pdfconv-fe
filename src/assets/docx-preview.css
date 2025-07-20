@@ -1,0 +1,24 @@
+.docx-wrapper {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.docx-wrapper h1, .docx-wrapper h2, .docx-wrapper h3, .docx-wrapper h4 {
+  font-weight: bold;
+}
+.docx-wrapper table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.docx-wrapper th, .docx-wrapper td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+}
+.docx-wrapper p {
+  margin: 0 0 0.5em 0;
+} 
