@@ -22,6 +22,38 @@ const AdSlot = ({ slot = 'default', height = 90 }) => {
     }, 500);
   }, [slot]);
 
+  if (slot === 'vertical') {
+    return (
+      <div style={{ position: 'fixed', top: 100, right: 0, zIndex: 1200, width: 300, minHeight: 600, display: 'flex', justifyContent: 'center' }}>
+        <ins
+          ref={adRef}
+          className="adsbygoogle"
+          style={{ display: 'block', width: 300, minHeight: 600 }}
+          data-ad-client="ca-pub-9292802772908311"
+          data-ad-slot="4019842269"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      </div>
+    );
+  }
+
+  if (slot === 'vertical-left') {
+    return (
+      <div style={{ position: 'fixed', top: 100, left: 0, zIndex: 1200, width: 300, minHeight: 600, display: 'flex', justifyContent: 'center' }}>
+        <ins
+          ref={adRef}
+          className="adsbygoogle"
+          style={{ display: 'block', width: 300, minHeight: 600 }}
+          data-ad-client="ca-pub-9292802772908311"
+          data-ad-slot="4019842269"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      </div>
+    );
+  }
+
   return (
     <div style={{ width: '100%', textAlign: 'center', margin: '16px 0' }}>
       <ins

@@ -7,6 +7,7 @@ import ConvertPage from './pages/ConvertPage';
 import LanguageSelector from './components/LanguageSelector';
 import NotFoundPage from './pages/NotFoundPage';
 import LanguageLayout from './pages/LanguageLayout';
+import AdSlot from './components/AdSlot';
 
 const theme = createTheme({
   palette: {
@@ -27,6 +28,8 @@ const App = () => {
         <CssBaseline />
         <HelmetProvider>
           <Router>
+            <AdSlot slot="vertical" />
+            <AdSlot slot="vertical-left" />
             <LanguageSelector />
             <Routes>
               <Route path="/" element={<Navigate to="/en" replace />} />

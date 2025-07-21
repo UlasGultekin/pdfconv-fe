@@ -30,7 +30,7 @@ const CONVERT_GRID = [
 
 export default function HomePage() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
   const { lang } = useParams();
 
   const getLabel = (item) => {
@@ -46,12 +46,11 @@ export default function HomePage() {
       <Box sx={{ my: 4, textAlign: 'center' }}>
         <AdSlot slot="header" height={90} />
         <Typography variant="h1" component="h1" sx={{ color: 'primary.main', mb: 1 }}>
-          PDFConv
+          {ready ? t('homepage.title') : ''}
         </Typography>
-        <Typography variant="h5" component="h2" sx={{ color: 'text.secondary', mb: 3 }}>
-          {t('homepage.subtitle')}
+        <Typography variant="h5" component="h2" sx={{ color: 'text.secondary', mb: 2 }}>
+          {ready ? t('homepage.subtitle') : ''}
         </Typography>
-        <AdSlot slot="grid-top" height={60} />
       </Box>
       <Grid container spacing={3}>
         {CONVERT_GRID.map(item => (
