@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import HomePage from './pages/HomePage';
@@ -11,6 +11,7 @@ import AdSlot from './components/AdSlot';
 import Navbar from './components/Navbar';
 import AboutPage from './pages/AboutPage';
 import KvkkPage from './pages/KvkkPage';
+import { useTranslation } from 'react-i18next';
 
 const theme = createTheme({
   palette: {
@@ -24,6 +25,17 @@ const theme = createTheme({
   },
 });
 
+function ForceLangSync() {
+  const { i18n } = useTranslation();
+  const { lang } = useParams();
+  React.useEffect(() => {
+    if (lang && i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [lang, i18n]);
+  return null;
+}
+
 const App = () => {
   return (
     <Suspense fallback="loading">
@@ -33,6 +45,7 @@ const App = () => {
           <Router>
             <AdSlot slot="vertical" />
             <AdSlot slot="vertical-left" />
+            <ForceLangSync />
             <Navbar />
             <Routes>
               <Route path="/" element={<Navigate to="/en" replace />} />
