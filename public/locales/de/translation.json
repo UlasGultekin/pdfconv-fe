@@ -7,7 +7,9 @@
   "nav": {
     "home": "Startseite",
     "tools": "Werkzeuge",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "about": "Über uns",
+    "kvkk": "Datenschutz (KVKK)"
   },
   "homepage": {
     "title": "QuickToPDF",
@@ -18,5 +20,25 @@
     "word-to-pdf": "Word zu PDF",
     "pdf-to-excel": "PDF zu Excel",
     "excel-to-pdf": "Excel zu PDF"
+  },
+  "about": {
+    "title": "Über uns",
+    "intro": "QuickToPDF ist eine völlig kostenlose Plattform, mit der Sie Ihre Dateien schnell und sicher konvertieren können. Sie können PDF-, Word-, Excel-, Bild-, Audio- und Textdateien einfach miteinander konvertieren. Keine Registrierung erforderlich und alle Vorgänge sind sofortig.",
+    "featuresTitle": "Was können Sie tun?",
+    "feature1": "PDF ↔ Word, Excel, Bild, Audio und Textdateien konvertieren",
+    "feature2": "PDFs zusammenführen, teilen, komprimieren und bearbeiten",
+    "feature3": "Keine Gebühren, versteckten Einschränkungen oder Werbeblocker",
+    "feature4": "Benutzerfreundliche und mehrsprachige Oberfläche",
+    "freeNote": "QuickToPDF ist völlig kostenlos. Keine Ihrer Dateien werden auf unseren Servern gespeichert und Ihre Vorgänge sind vertraulich."
+  },
+  "kvkk": {
+    "title": "Datenschutzrichtlinie (KVKK)",
+    "intro": "Bei QuickToPDF legen wir großen Wert auf den Schutz der Privatsphäre der Nutzer. Ihre persönlichen Daten werden niemals gespeichert, weitergegeben oder an Dritte weitergegeben.",
+    "rulesTitle": "KVKK-Regeln",
+    "rule1": "Hochgeladene Dateien werden nur für die Konvertierung verwendet und nach dem Vorgang automatisch gelöscht.",
+    "rule2": "Keine Datei oder personenbezogene Daten werden dauerhaft auf unseren Servern gespeichert.",
+    "rule3": "Alle Daten werden alle 5 Minuten vollständig aus dem System gelöscht.",
+    "rule4": "Keine Benutzerinformationen werden an Dritte weitergegeben.",
+    "note": "Für Ihre Daten wird das höchste Maß an Sicherheit gewährleistet. Ihre Vorgänge mit QuickToPDF sind völlig sicher und vertraulich."
   }
 } 

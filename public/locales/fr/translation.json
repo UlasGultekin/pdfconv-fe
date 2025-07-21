@@ -7,7 +7,9 @@
   "nav": {
     "home": "Accueil",
     "tools": "Outils",
-    "contact": "Contact"
+    "contact": "Contact",
+    "about": "À propos",
+    "kvkk": "Confidentialité (KVKK)"
   },
   "homepage": {
     "title": "QuickToPDF",
@@ -18,5 +20,25 @@
     "word-to-pdf": "Word en PDF",
     "pdf-to-excel": "PDF en Excel",
     "excel-to-pdf": "Excel en PDF"
+  },
+  "about": {
+    "title": "À propos de nous",
+    "intro": "QuickToPDF est une plateforme entièrement gratuite qui vous permet de convertir vos fichiers rapidement et en toute sécurité. Vous pouvez facilement convertir des fichiers PDF, Word, Excel, image, audio et texte entre eux. Aucune inscription n'est requise et toutes les opérations sont instantanées.",
+    "featuresTitle": "Que pouvez-vous faire ?",
+    "feature1": "Convertir des fichiers PDF ↔ Word, Excel, Image, Audio et Texte",
+    "feature2": "Fusionner, diviser, compresser et éditer des PDF",
+    "feature3": "Aucun frais, aucune restriction cachée ou bloqueur de publicité",
+    "feature4": "Interface conviviale et multilingue",
+    "freeNote": "QuickToPDF est entièrement gratuit. Aucun de vos fichiers n'est stocké sur nos serveurs et vos opérations sont confidentielles."
+  },
+  "kvkk": {
+    "title": "Politique de confidentialité (KVKK)",
+    "intro": "Chez QuickToPDF, nous attachons une grande importance à la confidentialité des utilisateurs. Vos données personnelles ne sont jamais stockées, partagées ou divulguées à des tiers.",
+    "rulesTitle": "Règles KVKK",
+    "rule1": "Les fichiers téléchargés sont utilisés uniquement pour la conversion et sont automatiquement supprimés après le processus.",
+    "rule2": "Aucun fichier ou donnée personnelle n'est stocké de façon permanente sur nos serveurs.",
+    "rule3": "Toutes les données sont complètement supprimées du système toutes les 5 minutes.",
+    "rule4": "Aucune information utilisateur n'est partagée avec des tiers.",
+    "note": "Le plus haut niveau de sécurité est assuré pour vos données. Vos opérations avec QuickToPDF sont totalement sûres et confidentielles."
   }
 } 

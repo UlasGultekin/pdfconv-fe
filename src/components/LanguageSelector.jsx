@@ -12,7 +12,7 @@ const LANGUAGES = [
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
 ];
 
-export default function LanguageSelector({ position = 'absolute', top = 16, right = 24 }) {
+export default function LanguageSelector({ position = 'absolute', top = 16, right = 24, sx = {} }) {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const { lang = i18n.language } = useParams();
@@ -36,7 +36,7 @@ export default function LanguageSelector({ position = 'absolute', top = 16, righ
   };
 
   return (
-    <Box sx={{ position, top, right, zIndex: 1000 }}>
+    <Box sx={{ position, top, right, zIndex: 1000, ...sx }}>
       <IconButton onClick={handleClick} size="large" sx={{ bgcolor: 'white', border: '1px solid #eee', boxShadow: 1 }}>
         <span style={{ fontSize: 22, marginRight: 6 }}>{current.flag}</span>
         <Typography variant="body2" sx={{ fontWeight: 600, mr: 0.5 }}>{current.name}</Typography>

@@ -8,6 +8,9 @@ import LanguageSelector from './components/LanguageSelector';
 import NotFoundPage from './pages/NotFoundPage';
 import LanguageLayout from './pages/LanguageLayout';
 import AdSlot from './components/AdSlot';
+import Navbar from './components/Navbar';
+import AboutPage from './pages/AboutPage';
+import KvkkPage from './pages/KvkkPage';
 
 const theme = createTheme({
   palette: {
@@ -30,12 +33,14 @@ const App = () => {
           <Router>
             <AdSlot slot="vertical" />
             <AdSlot slot="vertical-left" />
-            <LanguageSelector />
+            <Navbar />
             <Routes>
               <Route path="/" element={<Navigate to="/en" replace />} />
               <Route path="/:lang" element={<LanguageLayout />}>
                 <Route index element={<HomePage />} />
                 <Route path="convert/:conversionType" element={<ConvertPage />} />
+                <Route path="about" element={<AboutPage />} />
+                <Route path="kvkk" element={<KvkkPage />} />
               </Route>
               <Route path="*" element={<NotFoundPage />} />
             </Routes>

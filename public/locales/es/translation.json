@@ -7,7 +7,29 @@
   "nav": {
     "home": "Inicio",
     "tools": "Herramientas",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "about": "Sobre nosotros",
+    "kvkk": "Privacidad (KVKK)"
+  },
+  "about": {
+    "title": "Sobre nosotros",
+    "intro": "QuickToPDF es una plataforma completamente gratuita que le permite convertir sus archivos de forma rápida y segura. Puede convertir fácilmente archivos PDF, Word, Excel, imágenes, audio y texto entre sí. No se requiere registro y todas las operaciones son instantáneas.",
+    "featuresTitle": "¿Qué puedes hacer?",
+    "feature1": "Convertir archivos PDF ↔ Word, Excel, Imagen, Audio y Texto",
+    "feature2": "Unir, dividir, comprimir y editar PDFs",
+    "feature3": "Sin tarifas, restricciones ocultas ni bloqueadores de anuncios",
+    "feature4": "Interfaz fácil de usar y multilingüe",
+    "freeNote": "QuickToPDF es completamente gratuito. Ninguno de sus archivos se almacena en nuestros servidores y sus operaciones son confidenciales."
+  },
+  "kvkk": {
+    "title": "Política de privacidad (KVKK)",
+    "intro": "En QuickToPDF, valoramos mucho la privacidad del usuario. Sus datos personales nunca se almacenan, comparten ni divulgan a terceros.",
+    "rulesTitle": "Reglas KVKK",
+    "rule1": "Los archivos cargados solo se utilizan para la conversión y se eliminan automáticamente después del proceso.",
+    "rule2": "Ningún archivo o dato personal se almacena permanentemente en nuestros servidores.",
+    "rule3": "Todos los datos se eliminan completamente del sistema cada 5 minutos.",
+    "rule4": "Ninguna información del usuario se comparte con terceros.",
+    "note": "Se proporciona el más alto nivel de seguridad para sus datos. Sus operaciones con QuickToPDF son completamente seguras y confidenciales."
   },
   "homepage": {
     "title": "QuickToPDF",

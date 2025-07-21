@@ -7,7 +7,9 @@
   "nav": {
     "home": "Anasayfa",
     "tools": "Araçlar",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "about": "Hakkımızda",
+    "kvkk": "KVKK"
   },
   "homepage": {
     "title": "QuickToPDF",
@@ -18,5 +20,25 @@
     "word-to-pdf": "Word'den PDF'e",
     "pdf-to-excel": "PDF'den Excel'e",
     "excel-to-pdf": "Excel'den PDF'e"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "intro": "QuickToPDF, dosyalarınızı hızlı ve güvenli bir şekilde dönüştürmenizi sağlayan tamamen ücretsiz bir platformdur. PDF, Word, Excel, görsel, ses ve metin dosyalarını kolayca birbirine çevirebilirsiniz. Kayıt olmanıza gerek yoktur ve tüm işlemler anında gerçekleşir.",
+    "featuresTitle": "Neler Yapabilirsiniz?",
+    "feature1": "PDF ↔ Word, Excel, Görsel, Ses ve Metin dosyalarını dönüştürme",
+    "feature2": "PDF birleştirme, bölme, sıkıştırma ve düzenleme",
+    "feature3": "Hiçbir ücret, gizli kısıtlama veya reklam engeli yok",
+    "feature4": "Kullanıcı dostu ve çok dilli arayüz",
+    "freeNote": "QuickToPDF tamamen ücretsizdir. Hiçbir dosyanız sunucularımızda tutulmaz ve işlemleriniz gizlidir."
+  },
+  "kvkk": {
+    "title": "KVKK & Gizlilik Politikası",
+    "intro": "QuickToPDF olarak kullanıcı gizliliğine büyük önem veriyoruz. Kişisel verileriniz hiçbir şekilde saklanmaz, paylaşılmaz veya üçüncü şahıslarla paylaşılmaz.",
+    "rulesTitle": "KVKK Kuralları",
+    "rule1": "Yüklediğiniz dosyalar yalnızca dönüşüm işlemi için kullanılır ve iş bittikten sonra otomatik olarak silinir.",
+    "rule2": "Hiçbir dosya veya kişisel veri sunucularımızda kalıcı olarak tutulmaz.",
+    "rule3": "Tüm veriler 5 dakikada bir sistemden tamamen silinir.",
+    "rule4": "Kullanıcıya ait hiçbir bilgi üçüncü şahıslarla paylaşılmaz.",
+    "note": "Verilerinizin güvenliği için en üst düzeyde önlem alınmaktadır. QuickToPDF ile işlemleriniz tamamen güvenli ve gizlidir."
   }
 } 
