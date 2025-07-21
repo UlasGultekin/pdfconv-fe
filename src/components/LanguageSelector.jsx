@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Menu, MenuItem, IconButton, Box, Typography, ListItemIcon } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -7,14 +8,14 @@ const LANGUAGES = [
   { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-  { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
 ];
 
 export default function LanguageSelector({ position = 'absolute', top = 16, right = 24 }) {
   const navigate = useNavigate();
-  const { lang = 'en' } = useParams();
+  const { i18n } = useTranslation();
+  const { lang = i18n.language } = useParams();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const current = LANGUAGES.find(l => l.code === lang) || LANGUAGES[1];
@@ -29,6 +30,7 @@ export default function LanguageSelector({ position = 'absolute', top = 16, righ
     if (code !== lang) {
       const path = window.location.pathname.replace(/^\/[a-z]{2}/, '/' + code);
       navigate(path);
+      i18n.changeLanguage(code);
     }
     setAnchorEl(null);
   };

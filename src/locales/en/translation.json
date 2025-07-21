@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "title": "QuickToPDF - Free Online PDF Converter",
+    "description": "Convert, compress, merge, split, and edit your PDF files for free. Support for Word, Excel, JPG, and more. No registration required.",
+    "keywords": "pdf converter, online pdf tool, convert pdf to word, pdf to excel, compress pdf, merge pdf, ilovepdf, smallpdf, pdf2go, convert files online, image to pdf, pdf editor, word to pdf, ppt to pdf, pdf to jpg, secure pdf conversion, free pdf tools, edit pdf online, split pdf pages, quicktopdf, online file conversion, docx to pdf, fast pdf tool, resume to pdf, scan to pdf, pdf form filler"
+  },
+  "nav": {
+    "home": "Home",
+    "tools": "Tools",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "title": "The All-in-One PDF Solution",
+    "subtitle": "Easily convert, edit, and manage your documents in one place."
+  },
+  "conversions": {
+    "pdf-to-word": "PDF to Word",
+    "word-to-pdf": "Word to PDF",
+    "pdf-to-excel": "PDF to Excel",
+    "excel-to-pdf": "Excel to PDF"
+  }
+} 

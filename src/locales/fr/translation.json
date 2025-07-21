@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "title": "QuickToPDF - Convertisseur PDF en ligne gratuit",
+    "description": "Convertissez, compressez, fusionnez, divisez et modifiez vos fichiers PDF gratuitement. Prise en charge de Word, Excel, JPG, etc. Aucune inscription requise.",
+    "keywords": "convertisseur pdf, outil pdf en ligne, convertir pdf en word, convertir pdf en excel, compresser pdf, fusionner pdf, ilovepdf, smallpdf, pdf2go, convertir des fichiers en ligne, image en pdf, éditeur pdf, word en pdf, ppt en pdf, pdf en jpg, conversion pdf sécurisée, outils pdf gratuits, modifier pdf en ligne, diviser les pages pdf, quicktopdf, conversion de fichiers en ligne, docx en pdf, outil pdf rapide, cv en pdf, numériser en pdf, remplisseur de formulaire pdf"
+  },
+  "nav": {
+    "home": "Accueil",
+    "tools": "Outils",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "title": "La solution PDF tout-en-un",
+    "subtitle": "Convertissez, modifiez et gérez facilement vos documents en un seul endroit."
+  },
+  "conversions": {
+    "pdf-to-word": "PDF en Word",
+    "word-to-pdf": "Word en PDF",
+    "pdf-to-excel": "PDF en Excel",
+    "excel-to-pdf": "Excel en PDF"
+  }
+} 

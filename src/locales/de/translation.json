@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "title": "QuickToPDF - Kostenloser Online-PDF-Konverter",
+    "description": "Konvertieren, komprimieren, zusammenführen, teilen und bearbeiten Sie Ihre PDF-Dateien kostenlos. Unterstützung für Word, Excel, JPG und mehr. Keine Registrierung erforderlich.",
+    "keywords": "pdf konverter, online pdf tool, pdf in word umwandeln, pdf in excel umwandeln, pdf komprimieren, pdf zusammenführen, ilovepdf, smallpdf, pdf2go, dateien online konvertieren, bild in pdf, pdf editor, word in pdf, ppt in pdf, pdf in jpg, sichere pdf konvertierung, kostenlose pdf tools, pdf online bearbeiten, pdf seiten aufteilen, quicktopdf, online dateikonvertierung, docx in pdf, schnelles pdf tool, lebenslauf in pdf, in pdf scannen, pdf formular ausfüller"
+  },
+  "nav": {
+    "home": "Startseite",
+    "tools": "Werkzeuge",
+    "contact": "Kontakt"
+  },
+  "homepage": {
+    "title": "Die All-in-One-PDF-Lösung",
+    "subtitle": "Konvertieren, bearbeiten und verwalten Sie Ihre Dokumente einfach an einem Ort."
+  },
+  "conversions": {
+    "pdf-to-word": "PDF zu Word",
+    "word-to-pdf": "Word zu PDF",
+    "pdf-to-excel": "PDF zu Excel",
+    "excel-to-pdf": "Excel zu PDF"
+  }
+} 

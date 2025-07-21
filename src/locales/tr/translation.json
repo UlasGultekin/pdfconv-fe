@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "title": "QuickToPDF - Ücretsiz Online PDF Dönüştürücü",
+    "description": "PDF dosyalarınızı ücretsiz olarak dönüştürün, sıkıştırın, birleştirin, bölün ve düzenleyin. Word, Excel, JPG ve daha fazlası için destek. Kayıt gerekmez.",
+    "keywords": "pdf dönüştürücü, online pdf aracı, pdf'i word'e çevir, pdf'i excel'e çevir, pdf sıkıştırma, pdf birleştirme, ilovepdf, smallpdf, pdf2go, online dosya dönüştürme, resmi pdf'e çevir, pdf düzenleyici, word'ü pdf'e çevir, ppt'yi pdf'e çevir, pdf'i jpg'ye çevir, güvenli pdf dönüştürme, ücretsiz pdf araçları, online pdf düzenle, pdf sayfalarını böl, quicktopdf, online dosya dönüştürme, docx'i pdf'e çevir, hızlı pdf aracı, cv'yi pdf yap, tarayıcıdan pdf yap, pdf formu doldurucu"
+  },
+  "nav": {
+    "home": "Anasayfa",
+    "tools": "Araçlar",
+    "contact": "İletişim"
+  },
+  "homepage": {
+    "title": "Hepsi Bir Arada PDF Çözümü",
+    "subtitle": "Belgelerinizi tek bir yerden kolayca dönüştürün, düzenleyin ve yönetin."
+  },
+  "conversions": {
+    "pdf-to-word": "PDF'den Word'e",
+    "word-to-pdf": "Word'den PDF'e",
+    "pdf-to-excel": "PDF'den Excel'e",
+    "excel-to-pdf": "Excel'den PDF'e"
+  }
+} 

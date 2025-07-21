@@ -1,49 +1,59 @@
-import React, { useState, useLayoutEffect, useEffect, useMemo } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useState, useLayoutEffect, useEffect } from 'react';
+import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Container, Box, Typography, Button, CircularProgress, Alert, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { Container, Box, Typography, Button, CircularProgress, Alert, FormControl, InputLabel, Select, MenuItem, Paper } from '@mui/material';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import SeoMeta from '../components/SeoMeta';
-import { getSeoMeta, SEO_META } from '../utils/seo';
-import * as pdfjsLib from 'pdfjs-dist/build/pdf';
+import { SEO_META } from '../utils/seo';
 import { renderAsync } from 'docx-preview';
 import '../assets/docx-preview.css';
 import * as XLSX from 'xlsx';
-import LanguageSelector from '../components/LanguageSelector';
 import AdSlot from '../components/AdSlot';
-pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.js';
 
 export default function ConvertPage() {
-  const { lang = 'en', convertType = 'pdf-to-word' } = useParams();
+  const { lang = 'en', conversionType } = useParams();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const CONVERT_OPTIONS = Object.keys(SEO_META).map(key => {
-    const [from, to] = key.split('-to-');
-    return {
+
+  // 1. If the URL parameter hasn't loaded, show a loader.
+  // This prevents the "uncontrolled input" warning.
+  if (!conversionType) {
+    return <CircularProgress />;
+  }
+
+  // 2. If the parameter is invalid, navigate to the 404 page.
+  if (!SEO_META[conversionType]) {
+    return <Navigate to="/not-found" replace />;
+  }
+  
+  const meta = SEO_META[conversionType][lang] || SEO_META[conversionType]['en'];
+  
+  const CONVERT_OPTIONS = Object.keys(SEO_META).map(key => ({
       value: key,
-      label: `${t(from)} ${t('to')} ${t(to)}`,
+      label: SEO_META[key][lang]?.label || SEO_META[key]['en'].label,
       accept: key.includes('image') ? 'image/*' : key.includes('audio') ? 'audio/*' : '.pdf,.doc,.docx,.xls,.xlsx,.csv,.txt'
-    };
-  });
+  }));
+
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [downloadUrl, setDownloadUrl] = useState('');
   const [dragActive, setDragActive] = useState(false);
   const [previewUrl, setPreviewUrl] = useState('');
-  const [pdfPreviewUrl, setPdfPreviewUrl] = useState('');
   const [textPreview, setTextPreview] = useState('');
   const [wordPreviewHtml, setWordPreviewHtml] = useState('');
   const [wordArrayBuffer, setWordArrayBuffer] = useState(null);
   const [excelPreview, setExcelPreview] = useState(null);
   const wordPreviewRef = React.useRef(null);
+  const fileInputRef = React.useRef(null);
+
   const handleTypeChange = (e) => {
     const newType = e.target.value;
     navigate(`/${lang}/convert/${newType}`);
   };
-  const selectedOption = CONVERT_OPTIONS.find(opt => opt.value === convertType) || CONVERT_OPTIONS[0];
+  const selectedOption = CONVERT_OPTIONS.find(opt => opt.value === conversionType) || CONVERT_OPTIONS[0];
   const MAX_SIZE = 20 * 1024 * 1024;
   const isFileTypeValid = (file) => {
     if (!file) return false;
@@ -56,34 +66,19 @@ export default function ConvertPage() {
     if (!f) return;
     if (!isFileTypeValid(f)) {
       setError(i18n.language === 'tr' ? 'Dosya türü geçersiz.' : 'Invalid file type.');
-      setFile(null); setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+      setFile(null); setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
       return;
     }
     if (f.size > MAX_SIZE) {
       setError(i18n.language === 'tr' ? 'Dosya çok büyük (max 20MB).' : 'File too large (max 20MB).');
-      setFile(null); setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+      setFile(null); setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
       return;
     }
     setFile(f); setError(''); setDownloadUrl('');
     if (f.type.startsWith('image/')) {
-      setPreviewUrl(URL.createObjectURL(f)); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
-    } else if (f.type === 'application/pdf') {
-      setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
-      const fileReader = new FileReader();
-      fileReader.onload = async function() {
-        const typedarray = new Uint8Array(this.result);
-        const pdf = await pdfjsLib.getDocument({ data: typedarray }).promise;
-        const page = await pdf.getPage(1);
-        const viewport = page.getViewport({ scale: 1 });
-        const canvas = document.createElement('canvas');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-        await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
-        setPdfPreviewUrl(canvas.toDataURL());
-      };
-      fileReader.readAsArrayBuffer(f);
+      setPreviewUrl(URL.createObjectURL(f)); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
     } else if (f.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' || f.name.endsWith('.docx')) {
-      setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setExcelPreview(null);
+      setPreviewUrl(''); setTextPreview(''); setExcelPreview(null);
       const reader = new FileReader();
       reader.onload = function(e) {
         setWordArrayBuffer(new Uint8Array(e.target.result));
@@ -94,7 +89,7 @@ export default function ConvertPage() {
       f.type === 'application/vnd.ms-excel' ||
       f.name.endsWith('.xlsx') || f.name.endsWith('.xls')
     ) {
-      setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null);
+      setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null);
       const reader = new FileReader();
       reader.onload = function(e) {
         const data = new Uint8Array(e.target.result);
@@ -106,14 +101,14 @@ export default function ConvertPage() {
       };
       reader.readAsArrayBuffer(f);
     } else if (f.type.startsWith('text/') || f.name.endsWith('.csv')) {
-      setPreviewUrl(''); setPdfPreviewUrl(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+      setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
       const reader = new FileReader();
       reader.onload = function(e) {
         setTextPreview(e.target.result.split('\n').slice(0, 10).join('\n'));
       };
       reader.readAsText(f);
     } else {
-      setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+      setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
     }
   };
 
@@ -128,11 +123,12 @@ export default function ConvertPage() {
   }, [wordArrayBuffer]);
 
   // Dil eşitleme: URL'den lang alınır ve i18n'e uygulanır
-  useEffect(() => {
-    if (lang && i18n.language !== lang) {
-      i18n.changeLanguage(lang);
-    }
-  }, [lang, i18n]);
+  // This hook is removed as it's handled globally
+  // useEffect(() => {
+  //   if (lang && i18n.language !== lang) {
+  //     i18n.changeLanguage(lang);
+  //   }
+  // }, [lang, i18n]);
 
   const handleDrop = async (e) => {
     e.preventDefault(); e.stopPropagation(); setDragActive(false);
@@ -140,34 +136,19 @@ export default function ConvertPage() {
       const f = e.dataTransfer.files[0];
       if (!isFileTypeValid(f)) {
         setError(i18n.language === 'tr' ? 'Dosya türü geçersiz.' : 'Invalid file type.');
-        setFile(null); setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+        setFile(null); setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
         return;
       }
       if (f.size > MAX_SIZE) {
         setError(i18n.language === 'tr' ? 'Dosya çok büyük (max 20MB).' : 'File too large (max 20MB).');
-        setFile(null); setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+        setFile(null); setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
         return;
       }
       setFile(f); setError(''); setDownloadUrl('');
       if (f.type.startsWith('image/')) {
-        setPreviewUrl(URL.createObjectURL(f)); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
-      } else if (f.type === 'application/pdf') {
-        setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
-        const fileReader = new FileReader();
-        fileReader.onload = async function() {
-          const typedarray = new Uint8Array(this.result);
-          const pdf = await pdfjsLib.getDocument({ data: typedarray }).promise;
-          const page = await pdf.getPage(1);
-          const viewport = page.getViewport({ scale: 1 });
-          const canvas = document.createElement('canvas');
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-          await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
-          setPdfPreviewUrl(canvas.toDataURL());
-        };
-        fileReader.readAsArrayBuffer(f);
+        setPreviewUrl(URL.createObjectURL(f)); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
       } else if (f.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' || f.name.endsWith('.docx')) {
-        setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setExcelPreview(null);
+        setPreviewUrl(''); setTextPreview(''); setExcelPreview(null);
         const reader = new FileReader();
         reader.onload = function(e) {
           setWordArrayBuffer(new Uint8Array(e.target.result));
@@ -178,7 +159,7 @@ export default function ConvertPage() {
         f.type === 'application/vnd.ms-excel' ||
         f.name.endsWith('.xlsx') || f.name.endsWith('.xls')
       ) {
-        setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null);
+        setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null);
         const reader = new FileReader();
         reader.onload = function(e) {
           const data = new Uint8Array(e.target.result);
@@ -190,19 +171,19 @@ export default function ConvertPage() {
         };
         reader.readAsArrayBuffer(f);
       } else if (f.type.startsWith('text/') || f.name.endsWith('.csv')) {
-        setPreviewUrl(''); setPdfPreviewUrl(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+        setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
         const reader = new FileReader();
         reader.onload = function(e) {
           setTextPreview(e.target.result.split('\n').slice(0, 10).join('\n'));
         };
         reader.readAsText(f);
       } else {
-        setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+        setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
       }
     }
   };
   const handleRemoveFile = () => {
-    setFile(null); setDownloadUrl(''); setError(''); setPreviewUrl(''); setPdfPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
+    setFile(null); setDownloadUrl(''); setError(''); setPreviewUrl(''); setTextPreview(''); setWordPreviewHtml(''); setWordArrayBuffer(null); setExcelPreview(null);
     if (wordPreviewRef.current) wordPreviewRef.current.innerHTML = '';
   };
   const handleDrag = (e) => {
@@ -224,7 +205,7 @@ export default function ConvertPage() {
     try {
       const formData = new FormData();
       formData.append('file', file);
-      const res = await fetch(`${API_BASE}/convert/${convertType}`, {
+      const res = await fetch(`${API_BASE}/convert/${conversionType}`, {
         method: 'POST',
         body: formData,
       });
@@ -238,8 +219,6 @@ export default function ConvertPage() {
       setLoading(false);
     }
   };
-  const meta = getSeoMeta(convertType, lang);
-
   function getDownloadName(originalName, convertType) {
     if (!originalName) return '';
     const extMap = {
@@ -264,34 +243,37 @@ export default function ConvertPage() {
     return base + ext;
   }
   return (
-    <Container>
-      <LanguageSelector position="absolute" top={16} right={24} />
-      <AdSlot slot="header" height={90} />
-      <SeoMeta meta={meta} url={`https://pdfconv.example.com/${lang}/convert/${convertType}`} />
-      <h2 style={{ fontWeight: 700, fontSize: '2rem', marginBottom: 16, textAlign: 'center', color: '#333' }}>{t('formTitle')}</h2>
-      <AdSlot slot="form-top" height={60} />
-      <FormControl fullWidth sx={{ maxWidth: 400, mb: 2 }}>
-        <InputLabel id="convert-type-label">{t('convertType')}</InputLabel>
+    <Container maxWidth="sm">
+      <SeoMeta title={meta.title} description={meta.desc} />
+      <Box sx={{ my: 4, textAlign: 'center' }}>
+        <AdSlot slot="header" height={90} />
+        <Typography variant="h2" component="h1" sx={{ mb: 2 }}>
+          {meta.label}
+        </Typography>
+        <AdSlot slot="form-top" height={60} />
+      </Box>
+      
+      <FormControl fullWidth sx={{ mb: 3 }}>
+        <InputLabel>{t('convertType')}</InputLabel>
         <Select
-          labelId="convert-type-label"
-          value={convertType}
-          label={i18n.language === 'tr' ? 'Dönüştürme Tipi' : 'Convert Type'}
-          onChange={handleTypeChange}
+            value={conversionType}
+            label={t('convertType')}
+            onChange={(e) => navigate(`/${lang}/convert/${e.target.value}`)}
         >
           {CONVERT_OPTIONS.map(opt => (
-            <MenuItem key={opt.value} value={opt.value}>{opt.label}</MenuItem>
+              <MenuItem key={opt.value} value={opt.value}>{opt.label}</MenuItem>
           ))}
         </Select>
       </FormControl>
-      <Box
+
+      <Paper 
         component="form"
         onSubmit={handleSubmit}
-        sx={{ display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center' }}
+        sx={{ p: { xs: 2, sm: 4 }, display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center' }}
         onDragEnter={handleDrag}
         onDragOver={handleDrag}
         onDragLeave={handleDrag}
         onDrop={handleDrop}
-        aria-label={i18n.language === 'tr' ? 'Dosya yükleme alanı' : 'File upload area'}
       >
         <Box
           sx={{
@@ -306,7 +288,7 @@ export default function ConvertPage() {
             transition: 'border 0.2s, background 0.2s',
             mb: 2
           }}
-          onClick={() => document.getElementById('file-input').click()}
+          onClick={() => fileInputRef.current && fileInputRef.current.click()}
           tabIndex={0}
           role="button"
           aria-label={i18n.language === 'tr' ? 'Dosya seç' : 'Select file'}
@@ -318,6 +300,7 @@ export default function ConvertPage() {
                 {t('dragDrop')}
               </Typography>
               <input
+                ref={fileInputRef}
                 id="file-input"
                 type="file"
                 hidden
@@ -357,9 +340,6 @@ export default function ConvertPage() {
             {previewUrl && (
               <img src={previewUrl} alt="preview" style={{ maxWidth: 180, maxHeight: 180, borderRadius: 8, marginBottom: 8 }} />
             )}
-            {pdfPreviewUrl && (
-              <img src={pdfPreviewUrl} alt="pdf preview" style={{ maxWidth: 180, maxHeight: 180, borderRadius: 8, marginBottom: 8, border: '1px solid #bdbdbd' }} />
-            )}
             {wordPreviewHtml && (
               <Box ref={wordPreviewRef} className="docx-wrapper" sx={{ width: '100%', minHeight: 120, maxHeight: 320, overflow: 'auto', background: '#f4f6fa', borderRadius: 2, p: 1, mb: 1, border: '1px solid #e0e0e0' }} />
             )}
@@ -383,7 +363,7 @@ export default function ConvertPage() {
                 <pre style={{ margin: 0, fontSize: 13, color: '#333' }}>{textPreview}</pre>
               </Box>
             )}
-            {!previewUrl && !pdfPreviewUrl && !wordPreviewHtml && !excelPreview && !textPreview && (
+            {!previewUrl && !wordPreviewHtml && !excelPreview && !textPreview && (
               <InsertDriveFileIcon sx={{ fontSize: 40, color: '#6c47ff', mb: 1 }} />
             )}
             <Typography sx={{ fontWeight: 600 }}>{file.name}</Typography>
@@ -395,11 +375,11 @@ export default function ConvertPage() {
         {error && <Alert severity="error" sx={{ width: '100%', maxWidth: 400 }}>{error}</Alert>}
         {loading && !error && <Alert severity="info" sx={{ width: '100%', maxWidth: 400 }}>{i18n.language === 'tr' ? 'Dönüştürülüyor...' : 'Converting...'}</Alert>}
         {downloadUrl && (
-          <Button href={downloadUrl} download={getDownloadName(file?.name, convertType)} target="_blank" variant="contained" color="success" startIcon={<CheckCircleIcon />} sx={{ width: 220, fontSize: '1.1rem' }}>
+          <Button href={downloadUrl} download={getDownloadName(file?.name, conversionType)} target="_blank" variant="contained" color="success" startIcon={<CheckCircleIcon />} sx={{ width: 220, fontSize: '1.1rem' }}>
             {t('downloadResult')}
           </Button>
         )}
-      </Box>
+      </Paper>
       <AdSlot slot="footer" height={90} />
     </Container>
   );

@@ -119,44 +119,4 @@ export const SEO_META = {
     ar: { title: 'تحويل نص إلى صوت | PDFConv', desc: 'حوّل ملف النص الخاص بك بسرعة إلى صوت. مجاني وآمن ومتعدد اللغات.', label: 'Metin → Ses' },
     hi: { title: 'टेक्स्ट को ऑडियो में बदलें | PDFConv', desc: 'अपने टेक्स्ट फ़ाइल को जल्दी से ऑडियो में बदलें। मुफ्त, सुरक्षित और बहुभाषी.', label: 'Metin → Ses' }
   }
-};
-
-export function getSeoMeta(convertType, lang) {
-  if (SEO_META[convertType] && SEO_META[convertType][lang]) {
-    return SEO_META[convertType][lang];
-  }
-  // fallback ana sayfa
-  const fallback = {
-    tr: {
-      title: 'PDF, Word, Excel, Görsel ve Ses Dönüştürücü | Hızlı, Güvenli, Çok Dilli',
-      desc: 'Yüksek performanslı, çok dilli PDF, Word, Excel, Görsel ve Ses dönüştürücü. Dosyalarınızı güvenle ve hızla dönüştürün. SEO uyumlu, modern arayüz.',
-      label: 'Dönüştür'
-    },
-    en: {
-      title: 'PDF, Word, Excel, Image & Audio Converter | Fast, Secure, Multilingual',
-      desc: 'High-performance, multilingual PDF, Word, Excel, Image & Audio converter. Convert your files securely and quickly. SEO-friendly, modern UI.',
-      label: 'Convert'
-    },
-    es: {
-      title: 'Convertidor de PDF, Word, Excel, Imagen y Audio | Rápido, Seguro, Multilingüe',
-      desc: 'Conversor de PDF, Word, Excel, imagen y audio de alto rendimiento y multilingüe. Convierte tus archivos de forma segura y rápida.',
-      label: 'Convertir'
-    },
-    de: {
-      title: 'PDF, Word, Excel, Bild & Audio Konverter | Schnell, Sicher, Mehrsprachig',
-      desc: 'Leistungsstarker, mehrsprachiger PDF, Word, Excel, Bild- & Audio-Konverter. Konvertieren Sie Ihre Dateien sicher und schnell.',
-      label: 'Konvertieren'
-    },
-    ar: {
-      title: 'محول PDF و Word و Excel والصورة والصوت | سريع وآمن ومتعدد اللغات',
-      desc: 'محول PDF و Word و Excel والصورة والصوت عالي الأداء ومتعدد اللغات. حوّل ملفاتك بسرعة وأمان.',
-      label: 'تحويل'
-    },
-    hi: {
-      title: 'PDF, Word, Excel, इमेज और ऑडियो कन्वर्टर | तेज़, सुरक्षित, बहुभाषी',
-      desc: 'उच्च-प्रदर्शन, बहुभाषी PDF, Word, Excel, इमेज और ऑडियो कन्वर्टर। अपनी फ़ाइलें सुरक्षित और तेज़ी से बदलें।',
-      label: 'बदलें'
-    }
-  };
-  return fallback[lang] || fallback['en'];
-} 
+}; 
