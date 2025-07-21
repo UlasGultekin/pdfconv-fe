@@ -1,69 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-const AD_SIZES = {
-  header: { width: '100%', height: 90, minWidth: 320, minHeight: 60 },
-  rectangle: { width: 336, height: 280, minWidth: 200, minHeight: 100 },
-  footer: { width: '100%', height: 90, minWidth: 320, minHeight: 60 },
-};
+const AdSlot = ({ slot = 'default', height = 90 }) => {
+  const adRef = useRef(null);
 
-const AD_LABELS = {
-  header: 'Üst Reklam Alanı',
-  rectangle: 'İçerik Arası Reklam',
-  footer: 'Alt Reklam Alanı',
-  default: 'Reklam Alanı',
-};
+  useEffect(() => {
+    // Scripti sadece bir kez ekle
+    if (!window.adsbygoogle && !document.querySelector('script[src*="adsbygoogle.js"]')) {
+      const script = document.createElement('script');
+      script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9292802772908311";
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      document.body.appendChild(script);
+    }
+    // Her renderda reklamı yükle
+    setTimeout(() => {
+      try {
+        if (window.adsbygoogle && adRef.current) {
+          window.adsbygoogle.push({});
+        }
+      } catch (e) {}
+    }, 500);
+  }, [slot]);
 
-export default function AdSlot({ slot = 'default', type = 'header', sticky = false, dismissible = false, style = {}, className = '' }) {
-  const [visible, setVisible] = useState(true);
-  const size = AD_SIZES[type] || AD_SIZES.header;
-  const label = AD_LABELS[slot] || AD_LABELS[type] || AD_LABELS.default;
-
-  if (!visible) return null;
-
-  // Sticky ve dismissible özellikleri
-  const stickyStyle = sticky
-    ? { position: 'sticky', bottom: 0, zIndex: 1200, boxShadow: '0 -2px 8px rgba(0,0,0,0.08)' }
-    : {};
-
-  // Geliştirme ortamında dummy reklam kutusu
-  if (import.meta.env.DEV) {
-    return (
-      <div
-        className={className}
-        style={{
-          ...size,
-          ...stickyStyle,
-          background: 'repeating-linear-gradient(45deg, #f3f3f3, #f3f3f3 10px, #e0e0e0 10px, #e0e0e0 20px)',
-          color: '#888',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: 12,
-          fontSize: 16,
-          margin: '18px 0',
-          minHeight: size.minHeight,
-          minWidth: size.minWidth,
-          boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-          position: sticky ? 'sticky' : 'relative',
-          transition: 'opacity 0.3s',
-          ...style,
-        }}
-      >
-        {dismissible && (
-          <button onClick={() => setVisible(false)} style={{ position: 'absolute', top: 6, right: 10, background: 'none', border: 'none', fontSize: 18, cursor: 'pointer', color: '#aaa' }}>×</button>
-        )}
-        <span style={{ opacity: 0.7 }}>{label}</span>
-      </div>
-    );
-  }
-  // Prod ortamında gerçek reklam scripti eklenebilir
   return (
-    <div className={className} style={{ ...size, ...stickyStyle, ...style, minHeight: size.minHeight, minWidth: size.minWidth }}>
-      {/* Google AdSense kodunu buraya ekleyebilirsin */}
-      {/* <ins className="adsbygoogle" ... /> */}
-      {dismissible && (
-        <button onClick={() => setVisible(false)} style={{ position: 'absolute', top: 6, right: 10, background: 'none', border: 'none', fontSize: 18, cursor: 'pointer', color: '#aaa' }}>×</button>
-      )}
+    <div style={{ width: '100%', textAlign: 'center', margin: '16px 0' }}>
+      <ins
+        ref={adRef}
+        className="adsbygoogle"
+        style={{ display: 'block', width: '100%', minHeight: height }}
+        data-ad-client="ca-pub-9292802772908311"
+        data-ad-slot="9173108350"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
     </div>
   );
-} 
+};
+
+export default AdSlot; 
