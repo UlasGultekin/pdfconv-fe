@@ -9,6 +9,10 @@ import AudiotrackIcon from '@mui/icons-material/Audiotrack';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
 import SeoMeta from '../components/SeoMeta';
 import AdSlot from '../components/AdSlot';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const CONVERT_GRID = [
   { type: 'pdf-to-word', icon: <DescriptionIcon fontSize="large" color="primary" /> },
@@ -44,12 +48,17 @@ export default function HomePage() {
     <Container maxWidth="md">
       <SeoMeta pageKey="home" />
       <Box sx={{ my: 4, textAlign: 'center' }}>
-        <AdSlot slot="header" height={90} />
         <Typography variant="h1" component="h1" sx={{ color: 'primary.main', mb: 1 }}>
           {ready ? t('homepage.title') : ''}
         </Typography>
         <Typography variant="h5" component="h2" sx={{ color: 'text.secondary', mb: 2 }}>
           {ready ? t('homepage.subtitle') : ''}
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 2, mt: 3 }}>
+          {t('homepage.desc')}
+        </Typography>
+        <Typography variant="body2" sx={{ mb: 2 }}>
+          <b>{t('homepage.howto')}</b>
         </Typography>
       </Box>
       <Grid container spacing={3}>
@@ -79,7 +88,47 @@ export default function HomePage() {
           </Grid>
         ))}
       </Grid>
-      <AdSlot slot="footer" height={90} />
+      <Typography variant="caption" color="text.secondary" sx={{ mt: 4, display: 'block', textAlign: 'center' }}>
+        Note: No ads are shown on error or dead-end pages in compliance with AdSense policies.
+      </Typography>
+      {/* FAQ Section - Accordion */}
+      <Box sx={{ my: 6 }}>
+        <Typography variant="h4" sx={{ mb: 2, color: 'primary.main', fontWeight: 700, textAlign: 'center' }}>
+          {t('faq.title')}
+        </Typography>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>{t('faq.q1')}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{t('faq.a1')}</Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>{t('faq.q2')}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{t('faq.a2')}</Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>{t('faq.q3')}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{t('faq.a3')}</Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>{t('faq.q4')}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{t('faq.a4')}</Typography>
+          </AccordionDetails>
+        </Accordion>
+      </Box>
     </Container>
   );
 } 

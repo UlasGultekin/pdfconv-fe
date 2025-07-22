@@ -243,12 +243,17 @@ export default function ConvertPage() {
     return base + ext;
   }
   return (
-    <Container maxWidth="sm">
-      <SeoMeta title={meta.title} description={meta.desc} />
-      <Box sx={{ my: 4, textAlign: 'center' }}>
-        <AdSlot slot="header" height={90} />
-        <Typography variant="h2" component="h1" sx={{ mb: 2 }}>
+    <Container maxWidth="md" sx={{ py: 6 }}>
+      <SeoMeta {...meta} />
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h4" sx={{ color: 'primary.main', fontWeight: 700, mb: 2 }}>
           {meta.label}
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          Convert your files quickly and securely. All files are deleted automatically after conversion. No registration required.
+        </Typography>
+        <Typography variant="body2" sx={{ mb: 2 }}>
+          <b>How to use?</b> Select your file, click convert, and download the result instantly. Your privacy is our priority.
         </Typography>
       </Box>
       

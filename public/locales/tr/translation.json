@@ -9,11 +9,14 @@
     "tools": "Araçlar",
     "contact": "İletişim",
     "about": "Hakkımızda",
-    "kvkk": "KVKK"
+    "kvkk": "KVKK",
+    "terms": "Kullanım Şartları"
   },
   "homepage": {
     "title": "QuickToPDF",
-    "subtitle": "PDF, Word, Excel ve daha fazlasını dönüştür, birleştir, böl, sıkıştır, düzenle ve güvenli hale getir. %100 ücretsiz, hızlı ve çok dilli."
+    "subtitle": "PDF, Word, Excel ve daha fazlasını dönüştür, birleştir, böl, sıkıştır, düzenle ve güvenli hale getir. %100 ücretsiz, hızlı ve çok dilli.",
+    "desc": "QuickToPDF, PDF, Word, Excel, görsel ve daha fazlasını dönüştürmek için ücretsiz ve güvenli bir online araçtır. Dosyalarınız asla sunucularımızda saklanmaz ve dönüşümden sonra otomatik olarak silinir. Kayıt gerekmez. Tüm işlemler anında ve gizli şekilde gerçekleşir.",
+    "howto": "Nasıl kullanılır? Dönüştürme türünü seçin, dosyanızı yükleyin ve sonucu saniyeler içinde indirin. Detaylı yardım için aşağıdaki SSS bölümüne bakın."
   },
   "conversions": {
     "pdf-to-word": "PDF'den Word'e",
@@ -29,7 +32,10 @@
     "feature2": "PDF birleştirme, bölme, sıkıştırma ve düzenleme",
     "feature3": "Hiçbir ücret, gizli kısıtlama veya reklam engeli yok",
     "feature4": "Kullanıcı dostu ve çok dilli arayüz",
-    "freeNote": "QuickToPDF tamamen ücretsizdir. Hiçbir dosyanız sunucularımızda tutulmaz ve işlemleriniz gizlidir."
+    "freeNote": "QuickToPDF tamamen ücretsizdir. Hiçbir dosyanız sunucularımızda tutulmaz ve işlemleriniz gizlidir.",
+    "detail1": "QuickToPDF olarak, kullanıcılarımızın dijital belgelerini en yüksek güvenlik ve gizlilik standartlarında dönüştürmelerini sağlamak için çalışıyoruz. Platformumuzda hiçbir dosya kalıcı olarak saklanmaz; tüm işlemler şeffaf, hızlı ve güvenli şekilde gerçekleşir. Modern bulut altyapımız sayesinde, dosya boyutundan veya türünden bağımsız olarak her kullanıcıya eşit ve yüksek kaliteli hizmet sunuyoruz.",
+    "detail2": "Kullanıcı deneyimini en üst düzeye çıkarmak için sürekli olarak teknolojimizi geliştiriyor, yeni dosya türleri ve dönüştürme seçenekleri ekliyoruz. QuickToPDF, sadece bir araç değil, aynı zamanda dijital belgelerle çalışan herkes için güvenilir bir yardımcıdır. Amacımız, karmaşık işlemleri herkes için kolay ve erişilebilir hale getirmektir.",
+    "detail3": "Vizyonumuz, dünya çapında milyonlarca insanın dijital belgelerini güvenle yönetebileceği, hızlı ve ücretsiz bir platform sunmaktır. Misyonumuz ise, kullanıcılarımızın zamanını ve verilerini koruyarak, onlara en iyi çevrimiçi dosya dönüştürme deneyimini yaşatmaktır."
   },
   "kvkk": {
     "title": "KVKK & Gizlilik Politikası",
@@ -39,6 +45,91 @@
     "rule2": "Hiçbir dosya veya kişisel veri sunucularımızda kalıcı olarak tutulmaz.",
     "rule3": "Tüm veriler 5 dakikada bir sistemden tamamen silinir.",
     "rule4": "Kullanıcıya ait hiçbir bilgi üçüncü şahıslarla paylaşılmaz.",
-    "note": "Verilerinizin güvenliği için en üst düzeyde önlem alınmaktadır. QuickToPDF ile işlemleriniz tamamen güvenli ve gizlidir."
+    "note": "Verilerinizin güvenliği için en üst düzeyde önlem alınmaktadır. QuickToPDF ile işlemleriniz tamamen güvenli ve gizlidir.",
+    "detailedTitle": "Kişisel Verilerin Korunması ve Gizlilik Politikası (KVKK)",
+    "long": [
+      {"title": "1. Amaç ve Kapsam", "desc": "Bu politika, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili mevzuat kapsamında, QuickToPDF platformunda işlenen kişisel verilerin korunmasına ilişkin esasları belirler."},
+      {"title": "2. Kişisel Veri Tanımı", "desc": "KVKK madde 3 uyarınca kişisel veri, kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgidir. QuickToPDF, kullanıcıdan ad, e-posta, IP gibi doğrudan kişisel veri talep etmez; yalnızca teknik olarak zorunlu geçici veriler işlenir."},
+      {"title": "3. Veri İşleme İlkeleri", "desc": "KVKK madde 4 gereği, kişisel veriler hukuka ve dürüstlük kurallarına uygun, doğru ve gerektiğinde güncel, belirli, açık ve meşru amaçlarla işlenir. Veriler, işlendikleri amaçla bağlantılı, sınırlı ve ölçülü olarak saklanır."},
+      {"title": "4. Veri İşleme Amaçları", "desc": "Kişisel veriler, hizmetin sunulması, sistem güvenliğinin sağlanması, istatistiksel analiz ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlenir. Pazarlama veya üçüncü şahıslarla paylaşım amacıyla kullanılmaz."},
+      {"title": "5. Veri Saklama Süresi", "desc": "KVKK madde 7 gereği, kişisel veriler işlendikleri amaç için gerekli olan süre kadar saklanır. Yüklenen dosyalar ve geçici veriler, dönüşüm işlemi tamamlandıktan sonra en geç 5 dakika içinde otomatik olarak silinir."},
+      {"title": "6. Veri Güvenliği", "desc": "KVKK madde 12 kapsamında, QuickToPDF kişisel verilerin güvenliğini sağlamak için gerekli teknik ve idari tedbirleri alır. Sunucular güvenli veri merkezlerinde barındırılır, veri iletimi şifreli (SSL/TLS) olarak yapılır."},
+      {"title": "7. Kişisel Verilerin Aktarılması", "desc": "KVKK madde 8 ve 9 uyarınca, kişisel veriler yasal zorunluluklar haricinde üçüncü şahıslara veya yurtdışına aktarılmaz. Yasal bir talep olması halinde, yalnızca ilgili resmi mercilere bilgi sağlanır."},
+      {"title": "8. Kullanıcı Hakları (KVKK Madde 11)", "desc": "Kullanıcılar, KVKK madde 11 kapsamında; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, verilerin düzeltilmesini veya silinmesini isteme, işleme itiraz etme ve zararın giderilmesini talep etme haklarına sahiptir."},
+      {"title": "9. Çerezler ve Analitik", "desc": "QuickToPDF, kullanıcı deneyimini iyileştirmek ve istatistiksel analiz yapmak amacıyla çerezler (cookies) ve anonim analitik araçlar kullanabilir. Bu veriler kişisel kimlik tespiti için kullanılmaz."},
+      {"title": "10. Yasal Dayanak ve Değişiklikler", "desc": "Bu politika, 6698 sayılı KVKK, ilgili yönetmelikler ve Kişisel Verileri Koruma Kurulu kararlarına uygun olarak hazırlanmıştır. QuickToPDF, gizlilik politikasını yasal gereklilikler ve hizmet değişiklikleri doğrultusunda güncelleyebilir. Güncellemeler sitede yayımlandığı anda yürürlüğe girer."},
+      {"title": "11. Açık Rıza ve İstisnalar", "desc": "KVKK madde 5 ve 6 gereği, kişisel veriler ilgili kişinin açık rızası olmaksızın işlenemez. Ancak kanunda belirtilen istisnai hallerde (ör. kanuni yükümlülük, sözleşmenin ifası) açık rıza aranmaksızın veri işlenebilir."},
+      {"title": "12. Başvuru ve İletişim", "desc": "Kişisel verilerinizle ilgili her türlü başvuru, talep ve şikayet için info@quicktopdf.com adresinden bize ulaşabilirsiniz. Başvurularınız KVKK madde 13 uyarınca en geç 30 gün içinde yanıtlanır."}
+    ]
+  },
+  "contact": {
+    "title": "İletişim",
+    "desc": "Sorularınız, önerileriniz veya geri bildiriminiz için bizimle iletişime geçebilirsiniz. Aşağıdaki formu doldurun veya <b>info@quicktopdf.com</b> adresine e-posta gönderin.",
+    "name": "Adınız",
+    "email": "E-posta Adresiniz",
+    "message": "Mesajınız",
+    "send": "Gönder",
+    "sending": "Gönderiliyor...",
+    "sent": "Mesajınız gönderildi!",
+    "demo": "Bu bir demodur. Gerçekten e-posta gönderilmeyecek."
+  },
+  "terms": {
+    "title": "Kullanım Şartları",
+    "desc": "QuickToPDF'u kullanarak aşağıdaki şartları kabul etmiş olursunuz. Lütfen dikkatlice okuyun.",
+    "detailedTitle": "Detaylı Kullanım Şartları",
+    "items": [
+      {
+        "title": "1. Hizmet Tanımı",
+        "desc": "QuickToPDF, kullanıcılarına ücretsiz ve hızlı dosya dönüştürme hizmeti sunar. Hizmet, olduğu gibi sağlanır ve herhangi bir zamanda değiştirilebilir veya sonlandırılabilir."
+      },
+      {
+        "title": "2. Hesap ve Kayıt",
+        "desc": "QuickToPDF'da kayıt veya hesap oluşturma zorunluluğu yoktur. Tüm işlemler anonim olarak yapılabilir."
+      },
+      {
+        "title": "3. Dosya Güvenliği ve Gizlilik",
+        "desc": "Yüklenen dosyalar yalnızca dönüşüm işlemi için kullanılır ve işlem tamamlandıktan sonra otomatik olarak silinir. Hiçbir dosya veya kişisel veri kalıcı olarak saklanmaz."
+      },
+      {
+        "title": "4. Kullanıcı Sorumlulukları",
+        "desc": "Kullanıcılar, yükledikleri dosyaların yasalara uygunluğundan ve telif hakkı ihlali içermediğinden emin olmalıdır. Yasal olmayan, zararlı veya izinsiz içerik yüklenemez."
+      },
+      {
+        "title": "5. Hizmetin Kullanımı",
+        "desc": "QuickToPDF yalnızca yasal ve etik amaçlarla kullanılabilir. Hizmetin kötüye kullanımı, erişimin engellenmesine yol açabilir."
+      },
+      {
+        "title": "6. Sorumluluğun Sınırlandırılması",
+        "desc": "QuickToPDF, hizmetin kullanımından doğabilecek doğrudan veya dolaylı zararlardan sorumlu değildir."
+      },
+      {
+        "title": "7. Değişiklikler ve Güncellemeler",
+        "desc": "Kullanım şartları zaman zaman güncellenebilir. Güncellemeler sitede yayınlandığı anda geçerli olur."
+      },
+      {
+        "title": "8. İletişim",
+        "desc": "Her türlü soru ve öneriniz için info@quicktopdf.com adresinden bize ulaşabilirsiniz."
+      }
+    ],
+    "service": "Hizmet Tanımı",
+    "serviceDesc": "QuickToPDF ücretsiz online dosya dönüştürme araçları sunar. Hizmet olduğu gibi sunulur ve herhangi bir zamanda değiştirilebilir veya sonlandırılabilir.",
+    "user": "Kullanıcı Sorumlulukları",
+    "userDesc": "Yüklediğiniz dosyalardan siz sorumlusunuz ve bu dosyaları kullanma hakkına sahip olmalısınız. Yasal olmayan, zararlı veya telif hakkı içeren içerikleri izinsiz yüklemeyin.",
+    "privacy": "Gizlilik",
+    "privacyDesc": "Dosyalarınız veya kişisel verileriniz kalıcı olarak saklanmaz. Detaylar için Gizlilik Politikamıza bakın.",
+    "liability": "Sorumluluğun Sınırlandırılması",
+    "liabilityDesc": "QuickToPDF, bu hizmetin kullanımından doğabilecek zararlardan sorumlu değildir.",
+    "contact": "Sorularınız için info@quicktopdf.com adresinden bize ulaşabilirsiniz."
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular (SSS)",
+    "q1": "QuickToPDF ücretsiz mi?",
+    "a1": "Evet, tüm özellikler %100 ücretsizdir ve gizli ücret yoktur.",
+    "q2": "Dosyalarım güvende mi?",
+    "a2": "Evet, dosyalarınız güvenli şekilde işlenir ve dönüşümden sonra otomatik olarak silinir. Dosyalarınızı saklamıyor veya paylaşmıyoruz.",
+    "q3": "Kayıt olmam gerekiyor mu?",
+    "a3": "QuickToPDF'u kullanmak için kayıt olmanıza gerek yoktur.",
+    "q4": "Hangi dosya türleri destekleniyor?",
+    "a4": "PDF, Word, Excel, görsel, ses ve metin dosyaları dönüştürülebilir."
   }
 } 

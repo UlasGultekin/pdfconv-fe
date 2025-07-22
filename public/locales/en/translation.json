@@ -9,7 +9,8 @@
     "tools": "Tools",
     "contact": "Contact",
     "about": "About",
-    "kvkk": "Privacy (KVKK)"
+    "kvkk": "Privacy Policy",
+    "terms": "Terms"
   },
   "about": {
     "title": "About Us",
@@ -19,26 +20,111 @@
     "feature2": "Merge, split, compress, and edit PDFs",
     "feature3": "No fees, hidden restrictions, or ad blockers",
     "feature4": "User-friendly and multilingual interface",
-    "freeNote": "QuickToPDF is completely free. None of your files are stored on our servers and your operations are confidential."
+    "freeNote": "QuickToPDF is completely free. None of your files are stored on our servers and your operations are confidential.",
+    "detail1": "At QuickToPDF, we strive to ensure that our users can convert their digital documents with the highest standards of security and privacy. No file is ever stored permanently on our platform; all operations are transparent, fast, and secure. Thanks to our modern cloud infrastructure, we provide equal and high-quality service to every user, regardless of file size or type.",
+    "detail2": "We continuously improve our technology to maximize user experience, adding new file types and conversion options. QuickToPDF is not just a tool, but a reliable assistant for anyone working with digital documents. Our goal is to make complex operations easy and accessible for everyone.",
+    "detail3": "Our vision is to offer a fast and free platform where millions of people worldwide can manage their digital documents securely. Our mission is to protect our users' time and data while providing the best online file conversion experience."
   },
   "kvkk": {
     "title": "Privacy Policy (KVKK)",
     "intro": "At QuickToPDF, we highly value user privacy. Your personal data is never stored, shared, or disclosed to third parties.",
-    "rulesTitle": "KVKK Rules",
-    "rule1": "Uploaded files are used only for conversion and are automatically deleted after the process.",
-    "rule2": "No file or personal data is permanently stored on our servers.",
-    "rule3": "All data is completely deleted from the system every 5 minutes.",
-    "rule4": "No user information is shared with third parties.",
+    "detailedTitle": "Personal Data Protection and Privacy Policy (KVKK)",
+    "long": [
+      {"title": "1. Purpose and Scope", "desc": "This policy sets out the principles for the protection of personal data processed on the QuickToPDF platform, in accordance with the Turkish Law No. 6698 on the Protection of Personal Data (KVKK) and the General Data Protection Regulation (GDPR)."},
+      {"title": "2. Definition of Personal Data", "desc": "According to Article 3 of the KVKK, personal data means any information relating to an identified or identifiable natural person. QuickToPDF does not request direct personal data such as name, email, or IP address; only temporary technical data required for file conversion is processed."},
+      {"title": "3. Principles of Data Processing", "desc": "In accordance with Article 4 of the KVKK and Article 5 of the GDPR, personal data is processed lawfully, fairly, accurately, and, where necessary, kept up to date, for specified, explicit, and legitimate purposes, and is retained only as long as necessary for the purposes for which it is processed."},
+      {"title": "4. Purposes of Data Processing", "desc": "Personal data is processed only for the provision of the service, ensuring system security, statistical analysis, and fulfillment of legal obligations. User data is not used for marketing or shared with third parties."},
+      {"title": "5. Data Retention Period", "desc": "According to Article 7 of the KVKK and Article 17 of the GDPR, personal data is retained only for as long as necessary for the purposes for which it is processed. Uploaded files and temporary data are deleted automatically within 5 minutes after the conversion process is completed."},
+      {"title": "6. Data Security", "desc": "In accordance with Article 12 of the KVKK and Article 32 of the GDPR, QuickToPDF takes all necessary technical and administrative measures to ensure the security of personal data. Servers are hosted in secure data centers, and data transmission is encrypted (SSL/TLS)."},
+      {"title": "7. Transfer of Personal Data", "desc": "According to Articles 8 and 9 of the KVKK and Articles 44-50 of the GDPR, personal data is not transferred to third parties or abroad except for legal obligations. In case of a legal request, only the necessary information is provided to the relevant authorities."},
+      {"title": "8. User Rights (KVKK Art. 11, GDPR Art. 15-22)", "desc": "Users have the right to learn whether their personal data is processed, to request information, to learn whether it is used in accordance with its purpose, to know the third parties to whom it is transferred, to request correction or deletion, to object to processing, and to request compensation for damages."},
+      {"title": "9. Cookies and Analytics", "desc": "QuickToPDF may use cookies and anonymous analytics tools to improve user experience and perform statistical analysis. This data is not used for personal identification."},
+      {"title": "10. Legal Basis and Updates", "desc": "This policy is prepared in accordance with the KVKK, GDPR, and relevant legislation. QuickToPDF may update its privacy policy in line with legal requirements and service changes. Updates become effective as soon as they are published on the site."},
+      {"title": "11. Explicit Consent and Exceptions", "desc": "According to Articles 5 and 6 of the KVKK and Article 6 of the GDPR, personal data cannot be processed without the explicit consent of the data subject, except in cases specified by law (e.g., legal obligation, performance of a contract)."},
+      {"title": "12. Application and Contact", "desc": "For any application, request, or complaint regarding your personal data, you can contact us at info@quicktopdf.com. Your applications will be answered within 30 days in accordance with Article 13 of the KVKK and Article 12 of the GDPR."}
+    ],
     "note": "The highest level of security is provided for your data. Your operations with QuickToPDF are completely safe and confidential."
   },
   "homepage": {
     "title": "QuickToPDF",
-    "subtitle": "Convert PDF, Word, Excel and more. Merge, split, compress, edit and secure your documents. 100% free, fast and multilingual."
+    "subtitle": "Convert PDF, Word, Excel and more. Merge, split, compress, edit and secure your documents. 100% free, fast and multilingual.",
+    "desc": "QuickToPDF is a free and secure online tool for converting PDF, Word, Excel, images, and more. Your files are never stored on our servers and are deleted automatically after conversion. No registration is required. All conversions are instant and confidential.",
+    "howto": "How to use? Select the conversion type, upload your file, and download the result in seconds. For detailed help, see the FAQ below."
   },
   "conversions": {
     "pdf-to-word": "PDF to Word",
     "word-to-pdf": "Word to PDF",
     "pdf-to-excel": "PDF to Excel",
     "excel-to-pdf": "Excel to PDF"
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "You can contact us for your questions, suggestions or feedback. Please fill out the form below or send an email to <b>info@quicktopdf.com</b>.",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "sent": "Your message has been sent!",
+    "demo": "This is a demo. No email will be sent."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "desc": "By using QuickToPDF, you agree to the following terms and conditions. Please read them carefully.",
+    "detailedTitle": "Detailed Terms of Service",
+    "items": [
+      {
+        "title": "1. Service Description",
+        "desc": "QuickToPDF provides users with a free and fast file conversion service. The service is provided as-is and may be changed or discontinued at any time."
+      },
+      {
+        "title": "2. Account and Registration",
+        "desc": "No registration or account creation is required on QuickToPDF. All operations can be performed anonymously."
+      },
+      {
+        "title": "3. File Security and Privacy",
+        "desc": "Uploaded files are used only for conversion and are automatically deleted after the process. No file or personal data is stored permanently."
+      },
+      {
+        "title": "4. User Responsibilities",
+        "desc": "Users must ensure that the files they upload comply with the law and do not infringe copyright. Illegal, harmful, or unauthorized content cannot be uploaded."
+      },
+      {
+        "title": "5. Use of Service",
+        "desc": "QuickToPDF may only be used for legal and ethical purposes. Misuse of the service may result in access being blocked."
+      },
+      {
+        "title": "6. Limitation of Liability",
+        "desc": "QuickToPDF is not liable for any direct or indirect damages arising from the use of the service."
+      },
+      {
+        "title": "7. Changes and Updates",
+        "desc": "Terms of service may be updated from time to time. Updates become effective as soon as they are published on the site."
+      },
+      {
+        "title": "8. Contact",
+        "desc": "For any questions or suggestions, you can contact us at info@quicktopdf.com."
+      }
+    ],
+    "service": "Service Description",
+    "serviceDesc": "QuickToPDF provides free online file conversion tools. The service is provided as-is and may change or be discontinued at any time.",
+    "user": "User Responsibilities",
+    "userDesc": "You are responsible for the files you upload and must ensure you have the rights to use them. Do not upload illegal, harmful, or copyrighted content without permission.",
+    "privacy": "Privacy",
+    "privacyDesc": "We do not store your files or personal data permanently. See our Privacy Policy for details.",
+    "liability": "Limitation of Liability",
+    "liabilityDesc": "QuickToPDF is not liable for any damages or losses resulting from the use of this service.",
+    "contact": "For questions, please contact us at info@quicktopdf.com."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions (FAQ)",
+    "q1": "Is QuickToPDF free?",
+    "a1": "Yes, all features are 100% free and there are no hidden fees.",
+    "q2": "Are my files safe?",
+    "a2": "Yes, your files are processed securely and deleted automatically after conversion. We do not store or share your files.",
+    "q3": "Do I need to register?",
+    "a3": "No registration or sign-up is required to use QuickToPDF.",
+    "q4": "Which file types are supported?",
+    "a4": "PDF, Word, Excel, images, audio, and text files are supported for conversion."
   }
 } 

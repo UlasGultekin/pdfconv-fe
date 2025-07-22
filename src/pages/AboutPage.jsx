@@ -12,6 +12,15 @@ const AboutPage = () => {
       <Typography variant="body1" sx={{ mb: 3 }}>
         {t('about.intro', 'QuickToPDF, dosyalarınızı hızlı ve güvenli bir şekilde dönüştürmenizi sağlayan tamamen ücretsiz bir platformdur. PDF, Word, Excel, görsel, ses ve metin dosyalarını kolayca birbirine çevirebilirsiniz. Kayıt olmanıza gerek yoktur ve tüm işlemler anında gerçekleşir.')}
       </Typography>
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        {t('about.detail1', 'QuickToPDF olarak, kullanıcılarımızın dijital belgelerini en yüksek güvenlik ve gizlilik standartlarında dönüştürmelerini sağlamak için çalışıyoruz. Platformumuzda hiçbir dosya kalıcı olarak saklanmaz; tüm işlemler şeffaf, hızlı ve güvenli şekilde gerçekleşir. Modern bulut altyapımız sayesinde, dosya boyutundan veya türünden bağımsız olarak her kullanıcıya eşit ve yüksek kaliteli hizmet sunuyoruz.')}
+      </Typography>
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        {t('about.detail2', 'Kullanıcı deneyimini en üst düzeye çıkarmak için sürekli olarak teknolojimizi geliştiriyor, yeni dosya türleri ve dönüştürme seçenekleri ekliyoruz. QuickToPDF, sadece bir araç değil, aynı zamanda dijital belgelerle çalışan herkes için güvenilir bir yardımcıdır. Amacımız, karmaşık işlemleri herkes için kolay ve erişilebilir hale getirmektir.')}
+      </Typography>
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        {t('about.detail3', 'Vizyonumuz, dünya çapında milyonlarca insanın dijital belgelerini güvenle yönetebileceği, hızlı ve ücretsiz bir platform sunmaktır. Misyonumuz ise, kullanıcılarımızın zamanını ve verilerini koruyarak, onlara en iyi çevrimiçi dosya dönüştürme deneyimini yaşatmaktır.')}
+      </Typography>
       <Typography variant="h5" sx={{ mt: 4, mb: 1, fontWeight: 600 }}>{t('about.featuresTitle', 'Neler Yapabilirsiniz?')}</Typography>
       <List>
         <ListItem><ListItemText primary={t('about.feature1', 'PDF ↔ Word, Excel, Görsel, Ses ve Metin dosyalarını dönüştürme')} /></ListItem>

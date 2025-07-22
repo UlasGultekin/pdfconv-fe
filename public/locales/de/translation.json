@@ -9,11 +9,14 @@
     "tools": "Werkzeuge",
     "contact": "Kontakt",
     "about": "Über uns",
-    "kvkk": "Datenschutz (KVKK)"
+    "kvkk": "Datenschutz (KVKK)",
+    "terms": "Nutzungsbedingungen"
   },
   "homepage": {
     "title": "QuickToPDF",
-    "subtitle": "PDF, Word, Excel und mehr konvertieren, zusammenführen, teilen, komprimieren, bearbeiten und schützen. 100% kostenlos, schnell und mehrsprachig."
+    "subtitle": "PDF, Word, Excel und mehr konvertieren, zusammenführen, teilen, komprimieren, bearbeiten und schützen. 100% kostenlos, schnell und mehrsprachig.",
+    "desc": "QuickToPDF ist ein kostenloses und sicheres Online-Tool zum Konvertieren von PDF, Word, Excel, Bildern und mehr. Ihre Dateien werden niemals auf unseren Servern gespeichert und nach der Konvertierung automatisch gelöscht. Keine Registrierung erforderlich. Alle Konvertierungen sind sofort und vertraulich.",
+    "howto": "Wie benutzt man es? Wählen Sie den Konvertierungstyp, laden Sie Ihre Datei hoch und laden Sie das Ergebnis in Sekunden herunter. Für detaillierte Hilfe siehe FAQ unten."
   },
   "conversions": {
     "pdf-to-word": "PDF zu Word",
@@ -29,7 +32,10 @@
     "feature2": "PDFs zusammenführen, teilen, komprimieren und bearbeiten",
     "feature3": "Keine Gebühren, versteckten Einschränkungen oder Werbeblocker",
     "feature4": "Benutzerfreundliche und mehrsprachige Oberfläche",
-    "freeNote": "QuickToPDF ist völlig kostenlos. Keine Ihrer Dateien werden auf unseren Servern gespeichert und Ihre Vorgänge sind vertraulich."
+    "freeNote": "QuickToPDF ist völlig kostenlos. Keine Ihrer Dateien werden auf unseren Servern gespeichert und Ihre Vorgänge sind vertraulich.",
+    "detail1": "Bei QuickToPDF setzen wir alles daran, unseren Nutzern die Konvertierung ihrer digitalen Dokumente nach höchsten Sicherheits- und Datenschutzstandards zu ermöglichen. Keine Datei wird jemals dauerhaft auf unserer Plattform gespeichert; alle Vorgänge sind transparent, schnell und sicher. Dank unserer modernen Cloud-Infrastruktur bieten wir jedem Nutzer, unabhängig von Dateigröße oder -typ, einen gleichwertigen und hochwertigen Service.",
+    "detail2": "Wir verbessern unsere Technologie kontinuierlich, um das Nutzererlebnis zu maximieren, und fügen ständig neue Dateitypen und Konvertierungsoptionen hinzu. QuickToPDF ist nicht nur ein Tool, sondern ein zuverlässiger Assistent für alle, die mit digitalen Dokumenten arbeiten. Unser Ziel ist es, komplexe Vorgänge für jeden einfach und zugänglich zu machen.",
+    "detail3": "Unsere Vision ist es, eine schnelle und kostenlose Plattform zu bieten, auf der Millionen von Menschen weltweit ihre digitalen Dokumente sicher verwalten können. Unsere Mission ist es, die Zeit und Daten unserer Nutzer zu schützen und ihnen das beste Online-Dateikonvertierungserlebnis zu bieten."
   },
   "kvkk": {
     "title": "Datenschutzrichtlinie (KVKK)",
@@ -39,6 +45,91 @@
     "rule2": "Keine Datei oder personenbezogene Daten werden dauerhaft auf unseren Servern gespeichert.",
     "rule3": "Alle Daten werden alle 5 Minuten vollständig aus dem System gelöscht.",
     "rule4": "Keine Benutzerinformationen werden an Dritte weitergegeben.",
-    "note": "Für Ihre Daten wird das höchste Maß an Sicherheit gewährleistet. Ihre Vorgänge mit QuickToPDF sind völlig sicher und vertraulich."
+    "note": "Für Ihre Daten wird das höchste Maß an Sicherheit gewährleistet. Ihre Vorgänge mit QuickToPDF sind völlig sicher und vertraulich.",
+    "detailedTitle": "Datenschutz- und Datenschutzrichtlinie (KVKK)",
+    "long": [
+      {"title": "1. Zweck und Geltungsbereich", "desc": "Diese Richtlinie legt die Grundsätze für den Schutz personenbezogener Daten fest, die auf der QuickToPDF-Plattform gemäß dem türkischen Gesetz Nr. 6698 (KVKK) und der Datenschutz-Grundverordnung (DSGVO) verarbeitet werden."},
+      {"title": "2. Definition personenbezogener Daten", "desc": "Nach Artikel 3 des KVKK sind personenbezogene Daten alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. QuickToPDF fordert vom Nutzer keine direkten personenbezogenen Daten wie Name, E-Mail oder IP-Adresse an; es werden nur die für die Dateikonvertierung erforderlichen temporären technischen Daten verarbeitet."},
+      {"title": "3. Grundsätze der Datenverarbeitung", "desc": "Gemäß Artikel 4 des KVKK und Artikel 5 der DSGVO werden personenbezogene Daten rechtmäßig, nach Treu und Glauben, korrekt und, falls erforderlich, auf dem neuesten Stand verarbeitet, für festgelegte, eindeutige und rechtmäßige Zwecke und nur so lange aufbewahrt, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist."},
+      {"title": "4. Zwecke der Datenverarbeitung", "desc": "Personenbezogene Daten werden nur zum Zweck der Bereitstellung des Dienstes, zur Gewährleistung der Systemsicherheit, zur statistischen Analyse und zur Erfüllung gesetzlicher Verpflichtungen verarbeitet. Nutzerdaten werden nicht für Marketingzwecke verwendet oder an Dritte weitergegeben."},
+      {"title": "5. Aufbewahrungsfrist von Daten", "desc": "Nach Artikel 7 des KVKK und Artikel 17 der DSGVO werden personenbezogene Daten nur so lange aufbewahrt, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist. Hochgeladene Dateien und temporäre Daten werden spätestens 5 Minuten nach Abschluss des Konvertierungsvorgangs automatisch gelöscht."},
+      {"title": "6. Datensicherheit", "desc": "Gemäß Artikel 12 des KVKK und Artikel 32 der DSGVO ergreift QuickToPDF alle erforderlichen technischen und administrativen Maßnahmen, um die Sicherheit personenbezogener Daten zu gewährleisten. Die Server werden in sicheren Rechenzentren gehostet, und die Datenübertragung erfolgt verschlüsselt (SSL/TLS)."},
+      {"title": "7. Übermittlung personenbezogener Daten", "desc": "Nach den Artikeln 8 und 9 des KVKK und den Artikeln 44-50 der DSGVO werden personenbezogene Daten außer bei gesetzlichen Verpflichtungen nicht an Dritte oder ins Ausland übermittelt. Im Falle einer gesetzlichen Anfrage werden nur die erforderlichen Informationen an die zuständigen Behörden weitergegeben."},
+      {"title": "8. Rechte der Nutzer (KVKK Art. 11, DSGVO Art. 15-22)", "desc": "Nutzer haben das Recht zu erfahren, ob ihre personenbezogenen Daten verarbeitet werden, Auskunft zu verlangen, zu erfahren, ob sie zweckgemäß verwendet werden, die Dritten zu kennen, an die sie übermittelt werden, die Berichtigung oder Löschung zu verlangen, der Verarbeitung zu widersprechen und Schadensersatz zu verlangen."},
+      {"title": "9. Cookies und Analysen", "desc": "QuickToPDF kann Cookies und anonyme Analysetools verwenden, um die Benutzererfahrung zu verbessern und statistische Analysen durchzuführen. Diese Daten werden nicht zur persönlichen Identifizierung verwendet."},
+      {"title": "10. Rechtsgrundlage und Aktualisierungen", "desc": "Diese Richtlinie wurde gemäß dem KVKK, der DSGVO und den einschlägigen Rechtsvorschriften erstellt. QuickToPDF kann seine Datenschutzrichtlinie entsprechend den gesetzlichen Anforderungen und Dienstleistungsänderungen aktualisieren. Aktualisierungen werden wirksam, sobald sie auf der Website veröffentlicht werden."},
+      {"title": "11. Ausdrückliche Einwilligung und Ausnahmen", "desc": "Nach den Artikeln 5 und 6 des KVKK und Artikel 6 der DSGVO dürfen personenbezogene Daten ohne ausdrückliche Einwilligung der betroffenen Person nicht verarbeitet werden, außer in den gesetzlich vorgesehenen Fällen (z. B. gesetzliche Verpflichtung, Vertragserfüllung)."},
+      {"title": "12. Antrag und Kontakt", "desc": "Für Anträge, Wünsche oder Beschwerden zu Ihren personenbezogenen Daten können Sie uns unter info@quicktopdf.com kontaktieren. Ihre Anfragen werden gemäß Artikel 13 des KVKK und Artikel 12 der DSGVO innerhalb von 30 Tagen beantwortet."}
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "desc": "Sie können uns für Ihre Fragen, Vorschläge oder Feedback kontaktieren. Bitte füllen Sie das untenstehende Formular aus oder senden Sie eine E-Mail an <b>info@quicktopdf.com</b>.",
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "sent": "Ihre Nachricht wurde gesendet!",
+    "demo": "Dies ist eine Demo. Es wird keine E-Mail gesendet."
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "desc": "Durch die Nutzung von QuickToPDF stimmen Sie den folgenden Bedingungen zu. Bitte lesen Sie sie sorgfältig durch.",
+    "detailedTitle": "Detaillierte Nutzungsbedingungen",
+    "items": [
+      {
+        "title": "1. Dienstbeschreibung",
+        "desc": "QuickToPDF bietet den Nutzern einen kostenlosen und schnellen Dateikonvertierungsdienst. Der Dienst wird wie besehen bereitgestellt und kann jederzeit geändert oder eingestellt werden."
+      },
+      {
+        "title": "2. Konto und Registrierung",
+        "desc": "Für QuickToPDF ist keine Registrierung oder Kontoerstellung erforderlich. Alle Vorgänge können anonym durchgeführt werden."
+      },
+      {
+        "title": "3. Dateisicherheit und Datenschutz",
+        "desc": "Hochgeladene Dateien werden nur für die Konvertierung verwendet und nach dem Vorgang automatisch gelöscht. Es werden keine Dateien oder persönlichen Daten dauerhaft gespeichert."
+      },
+      {
+        "title": "4. Benutzerverantwortung",
+        "desc": "Die Nutzer müssen sicherstellen, dass die von ihnen hochgeladenen Dateien den gesetzlichen Bestimmungen entsprechen und keine Urheberrechte verletzen. Illegale, schädliche oder nicht autorisierte Inhalte dürfen nicht hochgeladen werden."
+      },
+      {
+        "title": "5. Nutzung des Dienstes",
+        "desc": "QuickToPDF darf nur für legale und ethische Zwecke verwendet werden. Missbrauch des Dienstes kann zur Sperrung des Zugriffs führen."
+      },
+      {
+        "title": "6. Haftungsbeschränkung",
+        "desc": "QuickToPDF haftet nicht für direkte oder indirekte Schäden, die sich aus der Nutzung des Dienstes ergeben."
+      },
+      {
+        "title": "7. Änderungen und Aktualisierungen",
+        "desc": "Die Nutzungsbedingungen können von Zeit zu Zeit aktualisiert werden. Aktualisierungen werden wirksam, sobald sie auf der Website veröffentlicht werden."
+      },
+      {
+        "title": "8. Kontakt",
+        "desc": "Für Fragen oder Anregungen können Sie uns unter info@quicktopdf.com kontaktieren."
+      }
+    ],
+    "service": "Dienstbeschreibung",
+    "serviceDesc": "QuickToPDF bietet kostenlose Online-Dateikonvertierungstools. Der Dienst wird wie besehen bereitgestellt und kann jederzeit geändert oder eingestellt werden.",
+    "user": "Benutzerverantwortung",
+    "userDesc": "Sie sind für die von Ihnen hochgeladenen Dateien verantwortlich und müssen sicherstellen, dass Sie das Recht haben, sie zu verwenden. Laden Sie keine illegalen, schädlichen oder urheberrechtlich geschützten Inhalte ohne Erlaubnis hoch.",
+    "privacy": "Datenschutz",
+    "privacyDesc": "Wir speichern Ihre Dateien oder persönlichen Daten nicht dauerhaft. Weitere Informationen finden Sie in unserer Datenschutzrichtlinie.",
+    "liability": "Haftungsbeschränkung",
+    "liabilityDesc": "QuickToPDF haftet nicht für Schäden oder Verluste, die sich aus der Nutzung dieses Dienstes ergeben.",
+    "contact": "Bei Fragen kontaktieren Sie uns bitte unter info@quicktopdf.com."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen (FAQ)",
+    "q1": "Ist QuickToPDF kostenlos?",
+    "a1": "Ja, alle Funktionen sind 100% kostenlos und es gibt keine versteckten Gebühren.",
+    "q2": "Sind meine Dateien sicher?",
+    "a2": "Ja, Ihre Dateien werden sicher verarbeitet und nach der Konvertierung automatisch gelöscht. Wir speichern oder teilen Ihre Dateien nicht.",
+    "q3": "Muss ich mich registrieren?",
+    "a3": "Für die Nutzung von QuickToPDF ist keine Registrierung erforderlich.",
+    "q4": "Welche Dateitypen werden unterstützt?",
+    "a4": "PDF, Word, Excel, Bilder, Audio- und Textdateien werden für die Konvertierung unterstützt."
   }
 } 
