@@ -4,6 +4,10 @@ const AdSlot = ({ slot = 'default', height = 90 }) => {
   const adRef = useRef(null);
 
   useEffect(() => {
+    // Her mount öncesi reklam alanını temizle
+    if (adRef.current) {
+      adRef.current.innerHTML = '';
+    }
     // Scripti sadece bir kez ekle
     if (!window.adsbygoogle && !document.querySelector('script[src*="adsbygoogle.js"]')) {
       const script = document.createElement('script');
@@ -24,7 +28,10 @@ const AdSlot = ({ slot = 'default', height = 90 }) => {
 
   if (slot === 'vertical') {
     return (
-      <div style={{ position: 'fixed', top: 100, right: 0, zIndex: 1200, width: 300, minHeight: 600, display: 'flex', justifyContent: 'center' }}>
+      <div style={{ position: 'fixed', top: 100, right: 0, zIndex: 1200, width: 300, minHeight: 600, display: 'flex', justifyContent: 'center',
+        display: 'none',
+        '@media (min-width:900px)': { display: 'flex' }
+      }}>
         <ins
           ref={adRef}
           className="adsbygoogle"
@@ -40,7 +47,10 @@ const AdSlot = ({ slot = 'default', height = 90 }) => {
 
   if (slot === 'vertical-left') {
     return (
-      <div style={{ position: 'fixed', top: 100, left: 0, zIndex: 1200, width: 300, minHeight: 600, display: 'flex', justifyContent: 'center' }}>
+      <div style={{ position: 'fixed', top: 100, left: 0, zIndex: 1200, width: 300, minHeight: 600, display: 'flex', justifyContent: 'center',
+        display: 'none',
+        '@media (min-width:900px)': { display: 'flex' }
+      }}>
         <ins
           ref={adRef}
           className="adsbygoogle"

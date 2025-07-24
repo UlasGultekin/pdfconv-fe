@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react';
-import { useParams, useNavigate, Navigate } from 'react-router-dom';
+import { useParams, useNavigate, Navigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Container, Box, Typography, Button, CircularProgress, Alert, FormControl, InputLabel, Select, MenuItem, Paper } from '@mui/material';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
@@ -16,6 +16,7 @@ export default function ConvertPage() {
   const { lang = 'en', conversionType } = useParams();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
 
   // 1. If the URL parameter hasn't loaded, show a loader.
   // This prevents the "uncontrolled input" warning.
@@ -243,7 +244,10 @@ export default function ConvertPage() {
     return base + ext;
   }
   return (
-    <Container maxWidth="md" sx={{ py: 6 }}>
+    <Container maxWidth="md" sx={{ py: 6, position: 'relative' }}>
+      {/* Dikey reklamlar sadece masaüstünde görünür */}
+      <AdSlot key={location.pathname + '-left'} slot="vertical-left" />
+      <AdSlot key={location.pathname + '-right'} slot="vertical" />
       <SeoMeta {...meta} />
       <Box sx={{ mb: 4 }}>
         <Typography variant="h4" sx={{ color: 'primary.main', fontWeight: 700, mb: 2 }}>

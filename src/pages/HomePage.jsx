@@ -88,9 +88,35 @@ export default function HomePage() {
           </Grid>
         ))}
       </Grid>
+      <AdSlot slot="footer" height={90} />
       <Typography variant="caption" color="text.secondary" sx={{ mt: 4, display: 'block', textAlign: 'center' }}>
         Note: No ads are shown on error or dead-end pages in compliance with AdSense policies.
       </Typography>
+      {/* Bilgilendirici içerik ve blog bölümü */}
+      <Box sx={{ my: 6 }}>
+        <Typography variant="h4" sx={{ mb: 2, color: 'primary.main', fontWeight: 700, textAlign: 'center' }}>
+          {t('homepage.infoTitle')}
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 2 }}>{t('homepage.info1')}</Typography>
+        <Typography variant="body1" sx={{ mb: 2 }}>{t('homepage.info2')}</Typography>
+        <Typography variant="body1" sx={{ mb: 2 }}>{t('homepage.info3')}</Typography>
+        <Typography variant="h5" sx={{ mt: 4, mb: 2, color: 'primary.main', fontWeight: 600 }}>{t('homepage.guideTitle')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.guide1')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.guide2')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.guide3')}</Typography>
+        <Typography variant="h5" sx={{ mt: 4, mb: 2, color: 'primary.main', fontWeight: 600 }}>{t('homepage.securityTitle')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.security1')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.security2')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.security3')}</Typography>
+        <Typography variant="h5" sx={{ mt: 4, mb: 2, color: 'primary.main', fontWeight: 600 }}>{t('homepage.benefitsTitle')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.benefit1')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.benefit2')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.benefit3')}</Typography>
+        <Typography variant="h5" sx={{ mt: 4, mb: 2, color: 'primary.main', fontWeight: 600 }}>{t('homepage.blogTitle')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.blog1')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.blog2')}</Typography>
+        <Typography variant="body2" sx={{ mb: 1 }}>{t('homepage.blog3')}</Typography>
+      </Box>
       {/* FAQ Section - Accordion */}
       <Box sx={{ my: 6 }}>
         <Typography variant="h4" sx={{ mb: 2, color: 'primary.main', fontWeight: 700, textAlign: 'center' }}>
